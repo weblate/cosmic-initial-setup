@@ -44,7 +44,7 @@ appearance-page = Megjelenés testreszabása
 # LayoutPage
 layout-page = Elrendezés beállítása
     .bottom-panel = Alsó panel
-    .top-panel-and-dock = Felső panel és a dokk
+    .top-panel-and-dock = Felső panel és dokk
     .description = Helyezd át a panelt vagy a dokkot bármelyik képernyőszélre, módosítsd méretüket, és állítsd be az automatikus elrejtést a Beállításokban.
 # SystemAppsPage
 new-apps-page = Új rendszeralkalmazások
@@ -56,28 +56,28 @@ new-shortcuts-page = Új gyorsbillentyűk
 workflow-page = Munkaterületek a munkafolyamatodhoz
     .description =
         Lebegtesd vagy automatikusan csempézd az ablakokat munkaterületenként a csempéző kisalkalmazással.
-        Választhatsz függőleges vagy vízszintes munkaterületeket. Rögzítheted azokat az áttekintésben, hogy statikussá váljanak.
+        Választhatsz függőleges vagy vízszintes munkaterületeket. Rögzítheted azokat az áttekintésben, hogy állandóvá váljanak.
 # LauncherPage
 launcher-page = Gyors és hatékony
     .description = Nyomd meg a Super (vagy Windows) gombot az Alkalmazásindító aktiválásához. Keress rá egy alkalmazásra, majd nyomd meg az Enter billentyűt a megnyitásához vagy az átváltásához. Beállításokhoz és rendszerfunkciókhoz is ugorhatsz, például a felfüggesztés funkcióhoz. Írd be a „?” jelet az Alkalmazásindító speciális funkcióinak megismeréséhez.
 
 # WirelessPage
 
-wireless-page = Csatlakozás a hálózathoz
-    .explain = Ha csatlakozol a hálózathoz, megkapod a legfrissebb rendszer- és biztonsági frissítéseket.
+wireless-page = Kapcsolódás a hálózathoz
+    .explain = Ha kapcsolódsz a hálózathoz, megkapod a legfrissebb rendszer- és biztonsági frissítéseket.
     .airplane-mode = A repülőgép-üzemmód be van kapcsolva
-    .connect = Csatlakozás
-    .connected = Csatlakoztatva
-    .connecting = Csatlakozás…
+    .connect = Kapcsolódás
+    .connected = Kapcsolódva
+    .connecting = Kapcsolódás…
     .disconnect = Bontás
     .forget = Elfelejtés
     .no-networks = Nem található hálózat
     .known-networks = Ismert hálózatok
     .visible-networks = Látható hálózatok
 auth-dialog = Hitelesítés szükséges
-    .wifi-description = Add meg a jelszót vagy a titkosítási kulcsot. A router „WPS” gombjának megnyomásával is csatlakozhatsz.
-forget-dialog = El akarod felejteni ezt a Wi-Fi hálózatot?
-    .description = A jelszót ismét meg kell majd adnod a csatlakozáshoz.
+    .wifi-description = Add meg a jelszót vagy a titkosítási kulcsot. A router „WPS” gombjának megnyomásával is kapcsolódhatsz.
+forget-dialog = Elfelejted ezt a Wi-Fi-hálózatot?
+    .description = A jelszót ismét meg kell majd adnod a kapcsolódáshoz.
 
 ## Users
 
