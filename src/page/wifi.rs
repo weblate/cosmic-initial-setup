@@ -189,7 +189,7 @@ impl super::Page for Page {
                                     }))
                                     .width(Length::Fixed(170.0))
                                     .apply(widget::container)
-                                    .class(cosmic::style::Container::Dialog)
+                                    .class(cosmic::style::Container::Dialog(true))
                             })
                             .apply(|e| Some(Element::from(e)))
                     } else if is_known {
