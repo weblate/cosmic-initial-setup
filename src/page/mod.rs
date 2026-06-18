@@ -1,5 +1,5 @@
 use cosmic::iced::Subscription;
-use cosmic::{Element, widget};
+use cosmic::{Element, surface, widget};
 use indexmap::IndexMap;
 use std::any::{Any, TypeId};
 
@@ -102,6 +102,8 @@ pub enum Message {
     User(user::Message),
     A11y(a11y::Message),
     WiFi(wifi::Message),
+    /// Handling of internal messages
+    Surface(surface::Action),
 }
 
 impl From<Message> for super::Message {

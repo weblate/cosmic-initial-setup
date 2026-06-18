@@ -2,7 +2,7 @@ use crate::{fl, page};
 use cosmic::iced::core::text::Wrapping;
 use cosmic::iced::{Alignment, Length, alignment};
 use cosmic::widget::{segmented_button, text};
-use cosmic::{Element, Task, widget};
+use cosmic::{Element, Task, surface, widget};
 use cosmic_randr_shell::OutputKey;
 use cosmic_settings_a11y_manager_subscription::{
     self as cosmic_a11y_manager, AccessibilityEvent, AccessibilityRequest,
@@ -137,9 +137,14 @@ impl page::Page for Page {
         });
 
         let scale = widget::settings::item::builder(fl!("accessibility-page", "scale")).control(
-            widget::dropdown(DPI_SCALE_LABELS, Some(self.scale), |option| {
-                Message::Scale(option).into()
-            }),
+            widget::dropdown::popup_dropdown(
+                DPI_SCALE_LABELS,
+                Some(self.scale),
+                |option| Message::Scale(option).into(),
+                cosmic::iced::window::Id::RESERVED,
+                |e| page::Message::A11y(Message::Surface(e)),
+                |a| crate::Message::PageMessage(a),
+            ),
         );
 
         let scale_options =
@@ -315,6 +320,9 @@ impl Page {
 
                 None => (),
             },
+            Message::Surface(a) => {
+                return cosmic::task::message(page::Message::Surface(a));
+            }
         }
 
         Task::none()
@@ -405,6 +413,8 @@ pub enum Message {
     ScaleAdjust(u32),
     /// Status of scale adjust command.
     ScaleAdjustResult(ScaleAdjustResult),
+    /// Handling of internal messages
+    Surface(surface::Action),
     /// Screen reader DBus events.
     A11yBus(a11y_bus::Response),
     /// Enable the screen reader.
