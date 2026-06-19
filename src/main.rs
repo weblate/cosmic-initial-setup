@@ -263,6 +263,11 @@ impl Application for App {
                             .map(cosmic::Action::App);
                     }
                 }
+                page::Message::Surface(action) => {
+                    return cosmic::task::message(cosmic::Action::Cosmic(
+                        cosmic::app::Action::Surface(action),
+                    ));
+                }
             },
 
             Message::PageOpen(page_i) => {
