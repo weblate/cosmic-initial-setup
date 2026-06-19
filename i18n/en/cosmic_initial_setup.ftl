@@ -47,7 +47,12 @@ timezone-and-location-page = Timezone and location
 # AppearancePage
 appearance-page = Personalize appearance
     .description = You can further customize accent colors and the look of your desktop in Appearance settings.
-
+    .effects = Effects
+    .frosted-glass = Frosted glass
+    .frosted-description = Applies to panels, applets, windows and system interfaces
+    .effects-tip = You can further customize accent colors and the look of your desktop in Appearance settings.
+    .tip = Tip:
+    
 # LayoutPage
 layout-page = Layout configuration
     .bottom-panel = Bottom panel

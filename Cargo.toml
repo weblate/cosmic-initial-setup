@@ -61,6 +61,7 @@ features = [
     "tokio",
     "winit",
     "xdg-portal",
+    "markdown",
 ]
 
 [dependencies.locale1]
