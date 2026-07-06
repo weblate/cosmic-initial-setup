@@ -54,7 +54,15 @@ git = "https://github.com/pop-os/cosmic-randr"
 [dependencies.libcosmic]
 git = "https://github.com/pop-os/libcosmic.git"
 default-features = false
-features = ["a11y", "dbus-config", "single-instance", "tokio", "winit", "xdg-portal"]
+features = [
+    "a11y",
+    "dbus-config",
+    "single-instance",
+    "tokio",
+    "winit",
+    "xdg-portal",
+    "markdown",
+]
 
 [dependencies.locale1]
 git = "https://github.com/pop-os/dbus-settings-bindings"
@@ -63,10 +71,12 @@ git = "https://github.com/pop-os/dbus-settings-bindings"
 git = "https://github.com/AerynOS/locales-rs"
 
 [features]
-default = ["a11y", "wgpu"]
+default = ["a11y", "wgpu", "wayland"]
 a11y = ["libcosmic/a11y"]
 nixos = []
 wgpu = ["libcosmic/wgpu"]
+wayland = ["libcosmic/wayland", "libcosmic/multi-window"]
+
 
 [profile.release-with-debug]
 inherits = "release"
@@ -83,3 +93,11 @@ members = ["geonames"]
 # cosmic-config = { path = "../libcosmic/cosmic-config" }
 # cosmic-theme = { path = "../libcosmic/cosmic-theme" }
 # iced_futures = { path = "../libcosmic/iced/futures" }
+# libcosmic = { git = "https://github.com/pop-os/libcosmic//", branch = "theme-v2" }
+# cosmic-config = { git = "https://github.com/pop-os/libcosmic//", branch = "theme-v2" }
+# cosmic-theme = { git = "https://github.com/pop-os/libcosmic//", branch = "theme-v2" }
+# iced_futures = { git = "https://github.com/pop-os/libcosmic//", branch = "theme-v2" }
+
+[patch.'https://github.com/pop-os/cosmic-protocols']
+cosmic-protocols = { git = "https://github.com/pop-os/cosmic-protocols//", rev = "a7d2d7a" }
+cosmic-client-toolkit = { git = "https://github.com/pop-os/cosmic-protocols//", rev = "a7d2d7a" }

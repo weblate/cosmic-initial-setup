@@ -6,7 +6,7 @@ use std::path::Path;
 
 use cosmic::app::{Core, Settings, Task};
 use cosmic::iced::{Alignment, Length, Limits, Subscription};
-use cosmic::{Application, Apply, Element, cosmic_theme, executor, theme, widget};
+use cosmic::{Application, Apply, Element, cosmic_theme, executor, surface, theme, widget};
 use futures::channel::mpsc::Sender;
 use futures::{SinkExt, Stream, StreamExt};
 use indexmap::IndexMap;
@@ -88,6 +88,8 @@ pub enum Message {
     Finish,
     PageMessage(page::Message),
     PageOpen(usize),
+    /// Handling of internal messages
+    Surface(surface::Action),
 }
 
 /// The [`App`] stores application-specific state.
@@ -155,7 +157,11 @@ impl Application for App {
     fn update(&mut self, message: Message) -> Task<Message> {
         match message {
             Message::None => {}
-
+            Message::Surface(a) => {
+                return cosmic::task::message(cosmic::Action::Cosmic(
+                    cosmic::app::Action::Surface(a),
+                ));
+            }
             Message::PageMessage(page_message) => match page_message {
                 page::Message::SetTheme(theme) => {
                     return cosmic::command::set_theme(theme);
@@ -256,6 +262,11 @@ impl Application for App {
                             .map(Message::PageMessage)
                             .map(cosmic::Action::App);
                     }
+                }
+                page::Message::Surface(action) => {
+                    return cosmic::task::message(cosmic::Action::Cosmic(
+                        cosmic::app::Action::Surface(action),
+                    ));
                 }
             },
 

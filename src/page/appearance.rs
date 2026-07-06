@@ -1,8 +1,12 @@
 use cosmic::cosmic_config::{Config, ConfigSet, CosmicConfigEntry};
 use cosmic::cosmic_theme::{self, ThemeBuilder, ThemeMode};
-use cosmic::iced::{Alignment, Length};
+use cosmic::iced::core::text::LineHeight;
+use cosmic::iced::widget::{rich_text, span};
+use cosmic::iced::{Alignment, Length, alignment, never};
 use cosmic::theme::{self, ThemeType};
+use cosmic::widget::{ListColumn, container};
 use cosmic::{Element, Task, widget};
+use cosmic_settings_network_manager_subscription::dbus::settings;
 use heck::ToTitleCase;
 use std::collections::BTreeSet;
 use std::ffi::OsStr;
@@ -52,6 +56,7 @@ impl Ord for Theme {
 #[derive(Clone, Debug)]
 pub enum Message {
     Select(usize),
+    ToggleFrosted(bool),
 }
 
 impl From<Message> for super::Message {
@@ -68,6 +73,7 @@ pub struct Page {
     dark_theme_builder_config: Option<Config>,
     themes: Vec<Theme>,
     selected: usize,
+    frosted_glass: bool,
 }
 
 impl Page {
@@ -156,15 +162,21 @@ impl Page {
             light_theme_builder_config: ThemeBuilder::light_config().ok(),
             themes,
             selected: if ThemeMode::default().is_dark { 0 } else { 1 },
+            frosted_glass: false,
         }
     }
 
     pub fn update(&mut self, message: Message) -> Task<page::Message> {
         match message {
             Message::Select(index) => {
-                let Some(selected_theme) = self.themes.get(index) else {
+                let Some(selected_theme) = self.themes.get_mut(index) else {
                     return Task::none();
                 };
+
+                selected_theme.builder.frosted_applets = self.frosted_glass;
+                selected_theme.builder.frosted_panel = self.frosted_glass;
+                selected_theme.builder.frosted_system_interface = self.frosted_glass;
+                selected_theme.builder.frosted_windows = self.frosted_glass;
 
                 let theme = selected_theme.builder.clone().build();
                 self.selected = index;
@@ -200,6 +212,10 @@ impl Page {
                     ..cosmic::Theme::default()
                 }))
             }
+            Message::ToggleFrosted(enabled) => {
+                self.frosted_glass = enabled;
+                self.update(Message::Select(self.selected))
+            }
         }
     }
 }
@@ -219,6 +235,7 @@ impl page::Page for Page {
 
     fn view(&self) -> Element<'_, page::Message> {
         let cosmic_theme::Spacing {
+            space_xxs,
             space_s,
             space_m,
             space_xl,
@@ -248,13 +265,58 @@ impl page::Page for Page {
             grid = grid.push(selection);
         }
 
-        let description = widget::text::body(fl!("appearance-page", "description"))
-            .align_x(cosmic::iced::Alignment::Center)
-            .width(Length::Fill);
+        let mut content = widget::column::with_capacity(2)
+            .spacing(space_m)
+            .align_x(alignment::Horizontal::Center);
+        content = content.push(grid);
+        let mut effects_column = widget::column::with_capacity(2)
+            .spacing(space_xxs)
+            .align_x(alignment::Horizontal::Center);
+        effects_column = effects_column
+            .push(widget::text::heading(fl!("appearance-page", "effects")).width(Length::Fill))
+            .align_x(alignment::Horizontal::Center);
+        let mut effects = widget::row::with_capacity(2).spacing(space_xxs);
+        effects = effects.push(
+            ListColumn::new()
+                .list_item_padding([space_xxs + 1, space_m]) // attempts to match size of tip
+                .add(
+                    cosmic::widget::settings::item::builder(fl!(
+                        "appearance-page",
+                        "frosted-glass"
+                    ))
+                    .description(fl!("appearance-page", "frosted-description"))
+                    .toggler(self.frosted_glass, |v| {
+                        page::Message::Appearance(Message::ToggleFrosted(v))
+                    }),
+                ),
+        );
+        let t = theme::active();
+        effects = effects.push(
+            ListColumn::new().add(
+                rich_text![
+                    span(fl!("appearance-page", "tip"))
+                        .color(t.cosmic().accent_text_color())
+                        .size(14)
+                        .line_height(LineHeight::Absolute(20.0.into()))
+                        .font(cosmic::font::default()),
+                    span(" ")
+                        .size(14)
+                        .line_height(LineHeight::Absolute(20.0.into()))
+                        .font(cosmic::font::default()),
+                    span(fl!("appearance-page", "effects-tip"))
+                        .size(14)
+                        .line_height(LineHeight::Absolute(20.0.into()))
+                        .font(cosmic::font::default())
+                ]
+                .on_link_click(never),
+            ),
+        );
+        effects_column = effects_column.push(effects);
+
+        content = content.push(effects_column);
 
         widget::column::with_capacity(2)
-            .push(widget::scrollable(grid))
-            .push(description)
+            .push(widget::scrollable(content))
             .align_x(Alignment::Center)
             .spacing(space_xl)
             .into()
