@@ -16,6 +16,11 @@ new-shortcuts-page = Nouveaux raccourcis clavier
     .description = Utilisez Maj + Super + flèches, ou glissez avec le curseur pour déplacer les fenêtres. Tirez parti des aides visuelles en utilisant l'agencement automatique des fenêtres.
 appearance-page = Personnaliser l'apparence
     .description = Vous pouvez modifier les couleurs d'accentuation et l'apparence de votre bureau dans les paramètres Apparence.
+    .effects = Effets
+    .frosted-glass = Verre dépoli
+    .frosted-description = S'applique aux panneaux, applets, fenêtres et aux interfaces système
+    .effects-tip = Vous pouvez modifier les couleurs d'accentuation et l'apparence de votre bureau dans les paramètres Apparence.
+    .tip = Conseil :
 workflow-page = Espaces de travail adaptés à votre mode de travail
     .description =
         Faites flotter les fenêtres ou agencez-les automatiquement par espace de travail à l'aide de l'applet d'agencement.

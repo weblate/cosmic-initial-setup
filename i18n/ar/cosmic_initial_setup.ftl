@@ -40,7 +40,12 @@ timezone-and-location-page = المنطقة الزمنية والموقع
     .geonames-attribution = القائمة مرتبة حسب عدد سكان المدينة. البيانات: geonames.org (مرخصة بموجب CC-BY-4.0).
 # AppearancePage
 appearance-page = خصّص المظهر
-    .description = يمكنك تخصيص ألوان التمييز ومظهر سطح المكتب بشكل أكبر في إعدادات المظهر.
+    .description = يمكنك تخصيص ألوان التمييز ومظهر سطح المكتب بشكل أكبر في إعدادات «المظهر».
+    .effects = التأثيرات
+    .frosted-glass = الزجاج بلوري
+    .frosted-description = ينطبق على اللوحات والبريمجات والنوافذ وواجهات النظام
+    .effects-tip = يمكنك تخصيص ألوان التمييز ومظهر سطح المكتب بشكل أكبر من خلال إعدادات «المظهر».
+    .tip = نصيحة:
 # LayoutPage
 layout-page = تضبيط التخطيط
     .bottom-panel = اللوحة السفلية
