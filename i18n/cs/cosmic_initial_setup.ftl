@@ -36,16 +36,21 @@ create-account-page = Vytvořte váš účet
     .password-mismatch = Heslo a jeho potvrzení se musí shodovat
 # LocationPage
 timezone-and-location-page = Časové pásmo a poloha
-    .search-the-closest-major-city = Najít nejbližší velké město...
-    .geonames-attribution = Seznam je seřazen podle obydlení měst. Data: geonames.org (licencováno CC-BY-4.0).
+    .search-the-closest-major-city = Vyhledat nejbližší velké město...
+    .geonames-attribution = Seznam je řazen podle počtu obyvatel jednotlivých měst. Data: geonames.org (licence CC-BY-4.0).
 # AppearancePage
-appearance-page = Přizpůsobit vzhled
-    .description = Dále můžete upravit barvy zvýraznění a vzhled své plochy v nastavení vzhledu.
+appearance-page = Přizpůsobení vzhledu
+    .description = Další možnosti přizpůsobení barev a plochy najdete v nastavení v sekci Vzhled.
+    .effects = Efekty
+    .frosted-glass = Ledové sklo
+    .frosted-description = Použije se pro panely, applety, okna a systémová rozhraní
+    .effects-tip = Další možnosti přizpůsobení barev a plochy najdete v nastavení v sekci Vzhled.
+    .tip = Tip:
 # LayoutPage
 layout-page = Nastavení rozložení
     .bottom-panel = Dolní panel
     .top-panel-and-dock = Horní panel a dok
-    .description = V nastavení lze panel nebo dok přesunout k libovolnému okraji, upravit jejich velikost nebo nastavit automatické skrývání.
+    .description = V nastavení lze panel i dok přesunout k libovolnému okraji, změnit velikost nebo také nastavit automatické skrývání.
 # SystemAppsPage
 new-apps-page = Nové systémové aplikace
     .description = Vyzkoušejte řadu nových systémových aplikací, které jsou součástí prostředí COSMIC. Patří mezi ně: Nastavení, Obchod COSMIC, Soubory, Textový editor nebo Terminál.
@@ -55,7 +60,7 @@ new-shortcuts-page = Nové klávesové zkratky
 # WorkflowPage
 workflow-page = Pracovní plochy pro váš styl práce
     .description =
-        Pomocí appletu můžete nastavit tradiční plovoucí okna nebo dlaždicový režim oken.
+        Pomocí appletu můžete pro jednotlivé pracovní plochy nastavit režim tradičních plovoucích oken nebo také dlaždicový režim oken.
         Pracovní plochy mohou být vertikální či horizontální. Lze je také připnout, aby zůstaly statické.
 # LauncherPage
 launcher-page = Rychlý a efektivní
@@ -63,8 +68,8 @@ launcher-page = Rychlý a efektivní
 
 # WirelessPage
 
-wireless-page = Připojte se
-    .explain = Když se připojíte, budete dostávat nejnovější systémové a bezpečnostní aktualizace.
+wireless-page = Připojte se k síti
+    .explain = Jakmile se připojíte k síti, budete mít k dispozici nejnovější systémové a bezpečnostní aktualizace.
     .airplane-mode = Režim letadla je zapnutý
     .connect = Připojit
     .connected = Připojeno

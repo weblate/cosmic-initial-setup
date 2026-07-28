@@ -41,6 +41,11 @@ timezone-and-location-page = 时区和位置
 # AppearancePage
 appearance-page = 个性化外观
     .description = 您可以在“外观”设置中进一步自定义主题色和桌面外观。
+    .effects = 效应
+    .frosted-glass = 磨砂玻璃效应
+    .frosted-description = 适用于面板、小部件、窗口与系统界面
+    .effects-tip = 您可以在“外观”设置中进一步自定义主题色和桌面外观。
+    .tip = 提示：
 # LayoutPage
 layout-page = 布局配置
     .bottom-panel = 底部面板

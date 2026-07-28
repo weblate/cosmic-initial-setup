@@ -5,4 +5,5 @@ wifi = वाई-फ़ाई
 identity = पहचान
 type-to-search = खोजने के लिए टाइप करें…
 password-confirm = पासवर्ड की पुष्टि करें
-settings = सेटिंग
+settings = सेटिंग्स
+cancel = रद्द करें

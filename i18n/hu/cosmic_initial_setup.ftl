@@ -41,6 +41,11 @@ timezone-and-location-page = Időzóna és hely
 # AppearancePage
 appearance-page = Megjelenés testreszabása
     .description = A kiemelőszínek és az asztal megjelenésének további testreszabása a Megjelenési beállításokban lehetséges.
+    .effects = Effektek
+    .frosted-glass = Tejüveghatás
+    .frosted-description = Panelekre, kisalkalmazásokra, ablakokra és rendszerfelületekre alkalmazva
+    .effects-tip = A kiemelőszínek és az asztal megjelenésének további testreszabása a Megjelenési beállításokban lehetséges.
+    .tip = Tipp:
 # LayoutPage
 layout-page = Elrendezés beállítása
     .bottom-panel = Alsó panel

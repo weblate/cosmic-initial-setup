@@ -39,8 +39,13 @@ timezone-and-location-page = Fuso horário e localização
     .search-the-closest-major-city = Pesquise a cidade mais próxima...
     .geonames-attribution = A lista é classificada pela população da cidade. Fonte: geonames.org (licença CC-BY-4.0).
 # AppearancePage
-appearance-page = Personalize a aparência
-    .description = Você pode alterar também as cores de destaque e a aparência da sua área de trabalho nas configurações de aparência.
+appearance-page = Personalizar a aparência
+    .description = Você pode personalizar ainda mais as cores de destaque e a aparência da sua área de trabalho nas configurações de Aparência.
+    .effects = Efeitos
+    .frosted-glass = Vidro fosco
+    .frosted-description = Aplica-se a painéis, miniaplicativos, janelas e interfaces do sistema
+    .effects-tip = Você pode personalizar ainda mais as cores de destaque e a aparência da sua área de trabalho nas configurações de Aparência.
+    .tip = Dica:
 # LayoutPage
 layout-page = Configuração do layout de tela
     .bottom-panel = Painel inferior

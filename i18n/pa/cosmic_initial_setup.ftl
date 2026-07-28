@@ -14,3 +14,7 @@ type-to-search = ਖੋਜਣ ਲਈ ਲਿਖੋ…
 wifi = Wi-Fi
 select-language-page = ਭਾਸ਼ਾ ਨੂੰ ਚੁਣੋ
 keyboard-layout-page = ਕੀਬੋਰਡ ਖਾਕੇ ਨੂੰ ਚੁਣੋ
+users = ਵਰਤੋਂਕਾਰ
+    .desc = ਪਰਮਾਣੀਕਰਨ ਅਤੇ ਵਰਤੋਂਕਾਰ ਖਾਤੇ।
+    .admin = ਐਡਮਿਨ
+    .standard = ਸਟੈਂਡਰਡ

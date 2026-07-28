@@ -39,6 +39,11 @@ timezone-and-location-page = Strefa czasowa i lokalizacja
 # AppearancePage
 appearance-page = Personalizuj wygląd
     .description = Możesz bardziej dostosować kolory akcentów oraz wygląd w ustawieniach wyglądu.
+    .effects = Efekty
+    .frosted-glass = Oszronione Szkło
+    .frosted-description = Ma zastosowanie w panelach, apletach, oknach i interfejsie systemowym
+    .effects-tip = Możesz bardziej dostosować kolory akcentów oraz wygląd w ustawieniach wyglądu.
+    .tip = Tip:
 # LayoutPage
 layout-page = Konfiguracja kompozycji
     .bottom-panel = Dolny panel
