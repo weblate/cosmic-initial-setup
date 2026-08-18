@@ -40,11 +40,11 @@ timezone-and-location-page = Fuso horário e localização
     .geonames-attribution = A lista é classificada pela população da cidade. Fonte: geonames.org (licença CC-BY-4.0).
 # AppearancePage
 appearance-page = Personalizar a aparência
-    .description = Você pode personalizar ainda mais as cores de destaque e a aparência da sua área de trabalho nas configurações de Aparência.
+    .description = Você pode personalizar ainda mais as cores de destaque e a aparência da sua área de trabalho nas configurações de aparência.
     .effects = Efeitos
     .frosted-glass = Vidro fosco
     .frosted-description = Aplica-se a painéis, miniaplicativos, janelas e interfaces do sistema
-    .effects-tip = Você pode personalizar ainda mais as cores de destaque e a aparência da sua área de trabalho nas configurações de Aparência.
+    .effects-tip = Você pode personalizar ainda mais as cores de destaque e a aparência da sua área de trabalho nas configurações de aparência.
     .tip = Dica:
 # LayoutPage
 layout-page = Configuração do layout de tela

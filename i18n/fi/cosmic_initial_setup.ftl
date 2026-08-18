@@ -1,5 +1,10 @@
 appearance-page = Mukauta ulkoasu
     .description = Korostusvärejä ja työpöydän ulkoasua voi mukauttaa lisää ulkoasun asetuksissa.
+    .effects = Tehosteet
+    .frosted-glass = Huurteinen lasi
+    .frosted-description = Soveltaa paneeleihin, sovelmiin, ikkunoihin ja järjestelmän käyttöliittymään
+    .effects-tip = Korostusvärejä ja työpöydän ulkoasua voi mukauttaa lisää ulkoasun asetuksissa.
+    .tip = Vihje:
 layout-page = Asetteluasetukset
     .bottom-panel = Alapaneeli
     .top-panel-and-dock = Yläpaneeli ja telakka
