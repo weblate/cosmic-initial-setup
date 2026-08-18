@@ -50,7 +50,7 @@ appearance-page = 个性化外观
 layout-page = 布局配置
     .bottom-panel = 底部面板
     .top-panel-and-dock = 顶部面板和程序坞
-    .description = 在"设置"中，可以将面板或程序坞移动到任意边缘、更改其大小并设置自动隐藏。
+    .description = 在“设置”中，可以将面板或程序坞移动到任意边缘、更改其大小并设置自动隐藏。
 # SystemAppsPage
 new-apps-page = 新的系统应用
     .description = 享受随 COSMIC 桌面环境带来的一系列新系统应用，包括设置、COSMIC 应用商店、文件、文本编辑器和终端。
@@ -80,7 +80,7 @@ wireless-page = 连接网络
     .known-networks = 已知网络
     .visible-networks = 可见网络
 auth-dialog = 需要身份验证
-    .wifi-description = 输入密码或加密密钥。您也可以按下路由器上的"WPS"按钮进行连接。
+    .wifi-description = 输入密码或加密密钥。您也可以按下路由器上的 “WPS” 按钮进行连接。
 forget-dialog = 忘记此 Wi-Fi 网络？
     .description = 未来使用此 Wi-Fi 网络时需要重新输入密码。
 
