@@ -43,7 +43,7 @@ appearance-page = Přizpůsobení vzhledu
     .description = Další možnosti přizpůsobení barev a plochy najdete v nastavení v sekci Vzhled.
     .effects = Efekty
     .frosted-glass = Ledové sklo
-    .frosted-description = Použije se pro panely, applety, okna a systémová rozhraní
+    .frosted-description = Použít efekt pro panely, applety, okna a systémová rozhraní
     .effects-tip = Další možnosti přizpůsobení barev a plochy najdete v nastavení v sekci Vzhled.
     .tip = Tip:
 # LayoutPage
