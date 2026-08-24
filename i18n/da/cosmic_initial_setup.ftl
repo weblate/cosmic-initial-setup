@@ -1,4 +1,4 @@
-cancel = Annuller
+cancel = Afbryd
 password = Adgangskode
 settings = Indstillinger
 skip = Spring over
